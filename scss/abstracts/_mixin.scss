@@ -1,3 +1,27 @@
 @mixin padding {
-    padding: 3rem 15rem;
+  padding: 3rem 15rem;
+  @include respond(tablet) {
+    padding: 2.5rem;
+  }
+}
+
+@mixin respond($breakpoint) {
+  //600px
+  @if ($breakpoint == phone) {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  //900px
+  @if ($breakpoint == tablet) {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  //1200px
+  @if ($breakpoint == tablet-land) {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
 }

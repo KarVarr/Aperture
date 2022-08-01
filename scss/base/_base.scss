@@ -12,19 +12,29 @@
   position: absolute;
   bottom: 5rem;
   right: 0;
+  @include respond(phone) {
+    bottom: 1rem;
+    padding-right: 2.5rem;
+  }
+
   .setting__box {
     display: flex;
     gap: 0.5rem;
   }
+
   .setting__box--text {
     font-size: 1.2rem;
     transform: translateY(-0.5rem);
   }
 }
 .photo__info {
-    max-width: 30rem;
-    position: absolute;
-    top: 50%;
-    right: 4%;
-    transform: translate(0, -50%);
+  max-width: 30rem;
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translate(0, -50%);
+  @include respond(phone) {
+    top: 20%;
+    right: 3%;
   }
+}

@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   gap: 10rem;
-
+  @include respond(phone) {
+    padding: 4rem;
+  }
   .clients__text {
     text-align: center;
   }
@@ -14,5 +16,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 8rem;
+    @include respond(phone) {
+      gap: 4rem;
+    }
   }
 }

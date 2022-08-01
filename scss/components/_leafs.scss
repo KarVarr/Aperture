@@ -1,5 +1,8 @@
 .leafs {
   position: relative;
+  @include respond(phone) {
+  }
+
   &__img {
     display: flex;
   }

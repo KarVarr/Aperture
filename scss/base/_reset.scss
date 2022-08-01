@@ -17,6 +17,12 @@ p {
 }
 html {
   font-size: 62.5%; // 1 rem === 10px
+  @include respond(tablet-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tablet) {
+    font-size: 50%;
+  }
 }
 
 // INPUT

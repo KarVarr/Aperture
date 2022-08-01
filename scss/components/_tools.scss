@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   position: relative;
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
   .tools__info {
     margin: 10rem;
     max-width: 50rem;
@@ -9,6 +13,15 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    @include respond(tablet-land) {
+      margin: 5rem;
+    }
+    @include respond(phone) {
+      text-align: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
     .title {
       color: $color-grey-text;
     }
@@ -21,8 +34,17 @@
   }
   .tools__img {
     display: flex;
+    @include respond(phone) {
+      border: 25px solid $color-black;
+    }
     img {
       object-fit: cover;
+    }
+  }
+  .setting {
+    @include respond(phone) {
+      bottom: 4rem;
+      padding-right: 4rem;
     }
   }
 }

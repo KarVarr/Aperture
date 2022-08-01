@@ -1,10 +1,28 @@
 .header {
   position: relative;
 
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .header__info {
     text-align: center;
     position: absolute;
     bottom: 10%;
+
+    @include respond(tablet-land) {
+      bottom: 20%;
+    }
+    @include respond(tablet) {
+      text-align: left;
+      left: 3%;
+    }
+    @include respond(phone) {
+      position: static;
+      text-align: center;
+      left: 50%;
+    }
+
     .info__title {
       color: $color-grey-text;
     }
@@ -16,6 +34,14 @@
     .info__paragraph {
       padding: 0 30%;
       color: $color-grey-text;
+      @include respond(tablet) {
+        padding-left: 0;
+        padding-bottom: 1rem;
+      }
+      @include respond(phone) {
+        padding: 0 10%;
+        margin-bottom: 2rem;
+      }
     }
   }
 }

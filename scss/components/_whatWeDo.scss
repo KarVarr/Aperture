@@ -12,8 +12,11 @@
   }
   .what__items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(51rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(41rem, 1fr));
     gap: 1.6rem;
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
     .items__card {
       position: relative;
 
@@ -25,6 +28,12 @@
         position: absolute;
         bottom: 2rem;
         left: 0;
+        @include respond(phone) {
+          padding: 1rem;
+        }
+        p {
+          max-width: 80%;
+        }
       }
     }
   }
