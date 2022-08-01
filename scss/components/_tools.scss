@@ -1,0 +1,28 @@
+.tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  position: relative;
+  .tools__info {
+    margin: 10rem;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    .title {
+      color: $color-grey-text;
+    }
+    .subtitle {
+      font-size: 2.8rem;
+    }
+    .paragraph {
+      color: $color-white-text;
+    }
+  }
+  .tools__img {
+    display: flex;
+    img {
+      object-fit: cover;
+    }
+  }
+}

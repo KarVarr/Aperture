@@ -4,6 +4,23 @@
   background-color: #000000;
 }
 
+.setting {
+  padding-right: 4rem;
+  display: flex;
+  gap: 1.6rem;
+  position: absolute;
+  bottom: 5rem;
+  right: 0;
+}
+.setting .setting__box {
+  display: flex;
+  gap: 0.5rem;
+}
+.setting .setting__box--text {
+  font-size: 1.2rem;
+  transform: translateY(-0.5rem);
+}
+
 *,
 *::after,
 *::before {
@@ -76,6 +93,11 @@ body {
   font-size: 1.6rem;
 }
 
+.paragraph {
+  font-size: 1.4rem;
+  color: #C0C0C0;
+}
+
 .card__btn {
   display: flex;
 }
@@ -93,6 +115,55 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+.card__btn .btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+  outline: 3px solid #ffffff;
+}
+
+.sunset {
+  position: relative;
+}
+.sunset__img {
+  display: flex;
+}
+.sunset .photo__info {
+  max-width: 30rem;
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translate(0, -50%);
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  position: relative;
+}
+.tools .tools__info {
+  margin: 10rem;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.tools .tools__info .title {
+  color: #C0C0C0;
+}
+.tools .tools__info .subtitle {
+  font-size: 2.8rem;
+}
+.tools .tools__info .paragraph {
+  color: #ffffff;
+}
+.tools .tools__img {
+  display: flex;
+}
+.tools .tools__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .what {
@@ -131,9 +202,6 @@ body {
   bottom: 2rem;
   left: 0;
 }
-.what .what__items .items__card .card__text--paragraph {
-  color: #C0C0C0;
-}
 
 .header {
   position: relative;
@@ -152,25 +220,6 @@ body {
 .header .header__info .info__paragraph {
   padding: 0 30%;
   color: #C0C0C0;
-}
-.header .header__setting,
-.header .setting {
-  padding-right: 4rem;
-  display: flex;
-  gap: 1.6rem;
-  position: absolute;
-  bottom: 5rem;
-  right: 0;
-}
-.header .header__setting .setting__box,
-.header .setting .setting__box {
-  display: flex;
-  gap: 0.5rem;
-}
-.header .header__setting .setting__box--text,
-.header .setting .setting__box--text {
-  font-size: 1.2rem;
-  transform: translateY(-0.5rem);
 }
 
 .nav {
