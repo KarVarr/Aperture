@@ -1,0 +1,13 @@
+.help {
+  padding: $padding;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  //only for the 'help'
+  .card__btn {
+    display: grid;
+    place-items: center;
+  }
+}

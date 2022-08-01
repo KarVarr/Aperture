@@ -21,6 +21,14 @@
   transform: translateY(-0.5rem);
 }
 
+.photo__info {
+  max-width: 30rem;
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  transform: translate(0, -50%);
+}
+
 *,
 *::after,
 *::before {
@@ -93,8 +101,17 @@ body {
   font-size: 1.6rem;
 }
 
+.subtitle {
+  font-size: 4rem;
+}
+
 .paragraph {
   font-size: 1.4rem;
+  color: #C0C0C0;
+}
+
+.paragraph--big {
+  font-size: 2.4rem;
   color: #C0C0C0;
 }
 
@@ -122,18 +139,54 @@ body {
   outline: 3px solid #ffffff;
 }
 
+.clients {
+  padding: 13rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+.clients .clients__text {
+  text-align: center;
+}
+.clients .clients__company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+
+.help {
+  padding: 13rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.help .card__btn {
+  display: grid;
+  place-items: center;
+}
+
+.leafs {
+  position: relative;
+}
+.leafs__img {
+  display: flex;
+}
+
+.star {
+  position: relative;
+}
+.star__img {
+  display: flex;
+}
+
 .sunset {
   position: relative;
 }
 .sunset__img {
   display: flex;
-}
-.sunset .photo__info {
-  max-width: 30rem;
-  position: absolute;
-  top: 50%;
-  right: 4%;
-  transform: translate(0, -50%);
 }
 
 .tools {
@@ -177,13 +230,6 @@ body {
 .what .what__info {
   text-align: center;
   margin-bottom: 4rem;
-}
-.what .what__info .info__title {
-  font-size: 4rem;
-}
-.what .what__info .info__paragraph {
-  font-size: 2.3rem;
-  color: #C0C0C0;
 }
 .what .what__items {
   display: grid;
