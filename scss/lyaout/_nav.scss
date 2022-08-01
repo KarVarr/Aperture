@@ -30,6 +30,7 @@
 
     .menu__link {
       padding: 1rem;
+      
       &:hover {
         background-color: $color-white;
         color: $color-black-text;
@@ -44,13 +45,14 @@
     top: 5%;
   }
   //BURGER MENU
-  #burger__menu,
+  
   .bar {
     display: none;
     @include respond(tablet) {
       display: none;
       z-index: 10;
       position: relative;
+      
     }
   }
   .bar {
@@ -62,6 +64,12 @@
       z-index: 10;
       cursor: pointer;
       position: relative;
+
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
 
       &::after,
       &::before {

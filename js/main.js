@@ -4,6 +4,7 @@ const burgerBtn = document.querySelector('.bar');
 const navMargin = document.querySelector('.nav');
 
 burgerBtn.addEventListener('click', e => {
+  e.preventDefault();
   if (menu.classList.toggle('active')) {
     navMargin.style.marginBottom = '40rem';
   } else {
